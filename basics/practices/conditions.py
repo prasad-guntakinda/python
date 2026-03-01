@@ -1,8 +1,9 @@
+print("=============================== Question-1: Even or Odd =============================== ")
 
-
-x = 10 
-y = 20
-
-if x > y :
-    print("x is greater than y")
+num = 11
+print("num: ",num, end=" ")
+if num%2 == 0:
+    print("Even")
+else:
+    print("Odd")
     
