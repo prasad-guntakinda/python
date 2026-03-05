@@ -55,11 +55,7 @@ for temp_var in sequence:
 
 ```
 
-### Examples: 
-1. Print each item in a list
-2. Display numbers from 1-10
-3. 
-#### 1. Printing each item in a list
+### Examples-1: Printing each item in a list
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -68,7 +64,7 @@ for fruit in fruits:
 
 ```
 
-#### 2. Using range(): 
+### Example-2: Using range(): 
 - The ``range()`` function is commonly used with for loops to iterate a specific number of times.
 
 ```python
