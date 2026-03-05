@@ -265,6 +265,98 @@ print(gst(1000,10))
 
 
 
+1. Positional-Only Arguments (/)
+When you see a / in a function signature, it means every parameter to the left of it must be passed by position only. You cannot use the name of the variable when calling the function.
+Syntax: def func(a, b, /):
+Why use it? It’s used when the parameter names are obvious or don't matter, and to prevent code from breaking if the parameter names are changed in the future.
+Example: Creating a math-heavy function
+python
+def calculate_area(length, width, /):
+    return length * width
+
+# ✅ CORRECT: Passed by position
+calculate_area(10, 5) 
+
+# ❌ ERROR: TypeError: calculate_area() got some positional-only arguments passed as keyword arguments
+calculate_area(length=10, width=5)
+Use code with caution.
+
+2. Keyword-Only Arguments (*)
+When you see a * in a function signature, it means every parameter to the right of it must be passed using its name (keyword).
+Syntax: def func(*, key1, key2):
+Why use it? It forces the caller to be explicit. This is great for "configuration" settings (like True/False flags) where a naked True at the end of a function call would be confusing to read.
+Example: A function that deletes data
+python
+def delete_user(user_id, *, confirm=False):
+    if confirm:
+        print(f"User {user_id} deleted.")
+    else:
+        print("Action cancelled.")
+
+# ✅ CORRECT: Explicitly naming the safety flag
+delete_user(101, confirm=True)
+
+# ❌ ERROR: TypeError: delete_user() takes 1 positional argument but 2 were given
+delete_user(101, True) 
+Use code with caution.
+
+3. Putting It All Together (The Hybrid)
+A single function can use both to create a very structured API. Parameters in the middle (between the / and *) can be passed by either position or keyword.
+python
+# Signature: (Positional-Only / Standard / Keyword-Only)
+def complex_func(pos_only, /, standard, *, kw_only):
+    print(pos_only, standard, kw_only)
+
+# ✅ Valid call
+complex_func("I am pos", "I am flexible", kw_only="I am keyword")
+
+# ✅ Also valid
+complex_func("I am pos", standard="I am flexible", kw_only="I am keyword")
+Use code with caution.
+
+Summary Table for Students
+Symbol	Meaning	Rule
+/	Positional-Only	Everything to the left must be value.
+*	Keyword-Only	Everything to the right must be key=value.
+Neither	Standard	Can be passed either way.
+
+
+
+
+Arbitrary arguments allow your functions to be flexible. They are used when you don’t know in advance how many inputs a user might provide.
+1. *args (Non-Keyword Arbitrary Arguments)
+The *args syntax allows a function to accept any number of positional arguments. Inside the function, args becomes a tuple.
+Key Concept: Use this when you want to perform the same action on a variable list of items.
+The Asterisk (*): This is the "unpacking" operator that tells Python to grab all remaining positional arguments.
+Example: A Multi-Add Function
+python
+def add_everything(*numbers):
+    # 'numbers' is a tuple like (1, 2, 3)
+    return sum(numbers)
+
+print(add_everything(5, 10))          # Result: 15
+print(add_everything(1, 2, 3, 4, 5))    # Result: 15
+Use code with caution.
+
+2. **kwargs (Keyword Arbitrary Arguments)
+The **kwargs syntax allows a function to accept any number of keyword arguments. Inside the function, kwargs becomes a dictionary.
+Key Concept: Use this for functions that need to handle named parameters that weren't defined in advance (common in site settings or user profiles).
+The Double Asterisk (**): This tells Python to grab all key=value pairs.
+Example: Building a User Profile
+python
+def build_profile(name, **info):
+    # 'info' is a dictionary like {'city': 'London', 'job': 'Dev'}
+    print(f"User: {name}")
+    for key, value in info.items():
+        print(f"- {key.title()}: {value}")
+
+build_profile("Alice", city="London", job="Engineer", hobby="Chess")
+
+
+
+
+
+
 
 
 

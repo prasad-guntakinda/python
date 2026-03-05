@@ -61,6 +61,7 @@ print(list(range(5, 20, 3)))
 - __Usage:__ It is most commonly used with for loops to iterate a specific number of times. 
 
 - Examples
+  
 | Syntax                   | Example                | Sequence Generated              |
 | ------------------------ | ---------------------- | ------------------------------- |
 | range(stop)              | list(range(5))         | [0, 1, 2, 3, 4]                 |
