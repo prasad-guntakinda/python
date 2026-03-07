@@ -1,5 +1,12 @@
 # Conditions
 
+## Indentation:
+- In other programming langs like `C` and `Java` block of code is defined inside with `curly braces {}`
+- In Python, we need to group the statements by using indentation.
+- Why indentation?
+    - Indentation keeps separate the group of statements. 
+- The recommended indentation is __4 spaces__.
+- We must follow the order of indentation otherwise we will get __IndentationError__
 
 
 

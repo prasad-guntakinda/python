@@ -1,7 +1,15 @@
-# Data Types:
+# Data Types, Identifiers and Operators
+
+## 1. Data Types:
 
 
-## 03: Identifiers:
+![Python Data Types](./images/py_data_types.png)
+
+
+---
+
+
+## 2. Identifiers:
 
 - The only allowed characters to write identifier in python are,
     - Alphabets, these can be either lower case or upper case.
@@ -36,8 +44,8 @@
 
 ---
 
-## 04: Variables:
-### Rules for variable names
+### Variables:
+- Rules for variable names
 - variable names follows Identifier rules
 - It's considered best practice (PEP8) that names are lowercase.
 - Avoid using words that have special meaning in Python like "list" and "str"
@@ -50,10 +58,11 @@
 ---
 
 
-## Data Types:
 
 
-![Python Data Types](./images/py_data_types.png)
 
+## 3. Operators
 
----
+- Arithmatic Operators
+- Logical Operators: and, or, not
+- Membership Operators: in, not in
