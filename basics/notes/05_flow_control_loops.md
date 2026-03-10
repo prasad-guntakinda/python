@@ -113,4 +113,24 @@ for i in range(5):
 ````
 
 9. 
-    
+
+
+Basic Questions
+- Print Numbers: Write a program that uses a while loop to print numbers from 1 to 10.
+- Countdown: Write a program that takes a starting integer from the user and counts down to zero, printing each value.
+- Simple Greeting: Use a while loop to print a message (e.g., "Hello, Python!") three times.
+- Even Numbers: Write a program to display all even numbers up to a number N provided by the user. 
+
+Intermediate Questions
+- Sum of Natural Numbers: Calculate the sum of the first N natural numbers (e.g., if N is 5, the sum is 1+2+3+4+5).
+- Multiplication Table: Print the multiplication table of a number entered by the user using a while loop.
+- Factorial Calculator: Write a program to find the factorial of a given non-negative integer.
+- Sum of Digits: Calculate the sum of the digits of a number (e.g., for 1234, the sum is 1+2+3+4=10).
+- Reverse a Number: Reverse a given integer number (e.g., input 1234, output 4321). 
+
+Advanced Questions
+Password Checker: Create a program that repeatedly prompts a user for a password until the correct one is entered. You can extend this by adding a maximum number of attempts before locking the user out.
+Fibonacci Sequence: Generate and print the Fibonacci sequence up to N terms.
+Prime Number Checker: Determine if a given positive integer is a prime number using a while loop.
+User Input Loop with Stop Condition: Write a program that keeps taking input from the user until they enter a specific word, like 'STOP' or a negative number.
+Average Calculator: Take a series of numbers from the user and return their average. Use an empty input or a specific value (like a negative number) as the stop criterion.   
