@@ -88,5 +88,14 @@ print(list(range(5, 20, 3)))
     }
     ````
 5. Tuple –  Swap values without converting to list.
-6. 
+6. Print Shopping cart total:
+```python
+cart = [
+ {"item":"Pen", "price":10, "qty":2},
+ {"item":"Book", "price":50, "qty":1}
+]
+
+```
+
+7. 
    

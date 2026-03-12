@@ -91,3 +91,8 @@ print("My name is %s and I am %d years old" % (name, age))  # old style
 
 
 ---
+
+
+## Practices:
+1. Word Frequency in a sentence
+

@@ -316,3 +316,401 @@ my_function("User Info", "Emil", "Tobias", age=25, city="Oslo")
     4.1: __*args:__ Position-Only Args, we can pass zero or more elements. all values are stored into `tuple`
     4.2: __**kwargs:__ Keyword-Only Args, we can pass zero or more keyword args.all values are stored into `dictionary`
 
+
+---
+
+
+## Practices:
+
+### Part-1: Python Functions Assessment (10 Problems)
+
+1. Write a function `calculate_area(length, width)` that returns the area of a rectangle.
+
+2. Function with Multiple Returns: Write a function math_operations(a, b) that returns: sum, difference, product
+
+3. Function with Default Parameter: Write a function greet(name, message="Hello") that prints a greeting.
+
+```text
+Example:
+greet("John") → Hello John
+greet("John", "Good Morning") → Good Morning John
+```
+4.  Discount Calculator: calculate_price(price, discount=10). Return final price after discount.
+
+5. Write function: student_info(name, age, course): Call it using positional arguments, keyword arguments
+
+6. Sum of Any Numbers: Create function, Return the sum of all numbers passed.
+
+7. Find Maximum: find_max(3,9,5,1) → 9
+
+8.  Display Employee Details: Print all key-value pairs.employee_details(name="Alice", salary=50000, dept="IT")
+
+9. Order Summary Function: order_summary(customer, *items, **details)
+
+```text
+Requirements:
+    - print customer name
+    - print list of items
+    - print extra details (delivery, payment mode)
+
+Example call:
+order_summary(
+   "John",
+   "Book","Pen","Notebook",
+   delivery="Express",
+   payment="Card"
+)
+```
+
+10.  Password Validator
+
+```text
+Create function:
+
+validate_password(password)
+
+Inside it create inner functions:
+
+check_length()
+check_digit()
+
+Rules:
+
+password ≥ 8 characters
+
+contains at least one digit
+
+Return "Valid" or "Invalid".
+
+Concepts tested:
+
+inner functions
+
+logical validation
+```
+
+11. Function Returning Another Function
+
+```text
+Create function:
+
+multiplier(n)
+
+It should return another function that multiplies numbers by n.
+
+Example:
+
+double = multiplier(2)
+double(5) → 10
+```
+
+
+---
+
+Part-2:
+
+
+Real-world function problems
+
+Real-World Function Problems (Beginner → Intermediate)
+1️⃣ Order Total Calculator
+
+Write a function:
+
+calculate_order_total(price, quantity, tax=0.05)
+
+Return total price including tax.
+
+Example:
+
+calculate_order_total(100, 2)
+→ 210
+
+Concepts:
+
+parameters
+
+default arguments
+
+return value
+
+2️⃣ Temperature Converter
+
+Write a function:
+
+convert_temperature(value, unit)
+
+If unit = "C" convert to Fahrenheit.
+If unit = "F" convert to Celsius.
+
+Example:
+
+convert_temperature(25, "C") → 77
+
+Concepts:
+
+condition inside functions
+
+return value
+
+3️⃣ Username Generator
+
+Write a function:
+
+generate_username(first_name, last_name)
+
+Return username in format:
+
+first letter of first name + last name
+
+Example:
+
+generate_username("John", "Smith")
+→ jsmith
+
+Concepts:
+
+string manipulation
+
+return value
+
+4️⃣ Password Strength Checker
+
+Create a function:
+
+check_password(password)
+
+Return "Strong" if password:
+
+≥ 8 characters
+
+contains digit
+
+contains uppercase letter
+
+Otherwise return "Weak".
+
+Concepts:
+
+conditions
+
+loops
+
+return value
+
+5️⃣ Salary Bonus Calculator
+
+Create function:
+
+calculate_bonus(salary, performance="average")
+
+Rules:
+
+Performance	Bonus
+excellent	20%
+good	10%
+average	5%
+
+Return total salary including bonus.
+
+Concepts:
+
+default argument
+
+conditions
+
+6️⃣ Shopping Cart Total
+
+Write function:
+
+cart_total(cart_items)
+
+Input example:
+
+cart = [
+ {"item":"Pen","price":10,"qty":2},
+ {"item":"Book","price":50,"qty":1}
+]
+
+Return total price.
+
+Concepts:
+
+lists
+
+dictionaries
+
+loops
+
+7️⃣ Attendance Percentage
+
+Write function:
+
+calculate_attendance(attended, total_classes)
+
+Return attendance percentage.
+
+Also return "Eligible" if ≥75%, otherwise "Not Eligible".
+
+Concepts:
+
+return multiple values
+
+8️⃣ Dynamic Discount System (*args)
+
+Create function:
+
+apply_discounts(price, *discounts)
+
+Each discount is a percentage.
+
+Example:
+
+apply_discounts(1000, 10, 5)
+
+Apply discounts sequentially and return final price.
+
+Concepts:
+
+*args
+
+loops
+
+9️⃣ Customer Profile (**kwargs)
+
+Create function:
+
+create_profile(**details)
+
+Return dictionary containing all customer details.
+
+Example:
+
+create_profile(name="John", age=30, city="Hyderabad")
+
+Concepts:
+
+**kwargs
+
+dictionary handling
+
+🔟 Order Summary Function
+
+Create function:
+
+order_summary(customer, *items, **details)
+
+Output example:
+
+Customer: John
+Items: Book, Pen
+Delivery: Express
+Payment: Card
+
+Concepts:
+
+normal args
+
+*args
+
+**kwargs
+
+1️⃣1️⃣ Email Masking Function
+
+Write function:
+
+mask_email(email)
+
+Example:
+
+mask_email("prasad@gmail.com")
+→ p*****@gmail.com
+
+Concepts:
+
+string slicing
+
+return value
+
+1️⃣2️⃣ Bank Withdrawal System
+
+Create function:
+
+withdraw(balance, amount)
+
+Rules:
+
+if amount > balance → return "Insufficient balance"
+
+else return updated balance.
+
+Concepts:
+
+conditional logic
+
+return values
+
+1️⃣3️⃣ Log Message Formatter
+
+Create function:
+
+log_message(level, message)
+
+Return formatted log:
+
+Example:
+
+log_message("INFO", "Server started")
+→ [INFO] Server started
+
+Concepts:
+
+formatting strings
+
+return value
+
+1️⃣4️⃣ Text Word Counter
+
+Write function:
+
+word_count(text)
+
+Return dictionary showing frequency of each word.
+
+Example:
+
+word_count("python is easy python")
+→ {'python':2,'is':1,'easy':1}
+
+Concepts:
+
+dictionaries
+
+loops
+
+1️⃣5️⃣ Tax Calculator with Inner Function
+
+Create function:
+
+calculate_tax(income)
+
+Inside it create inner function:
+
+get_tax_rate()
+
+Rules:
+
+Income	Tax
+< 50000	5%
+50000–100000	10%
+>100000	20%
+
+Return tax amount.
+
+Concepts:
+
+inner functions
+
+conditions
+
+return values
